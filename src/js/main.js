@@ -9,25 +9,33 @@ Vue.use(VueRouter);
 
 require('../css/style.css');
 
+// Vue Router
 
-//console.log(navComponent);
 
-new Vue({
-  el:"body",
-  data:{
-    msg:"Hello World",
-    contacts:[
-      "Dr.Sheldon Cooper",
-      "Leonard",
-      "Howard"
-    ]
+var router = new VueRouter({"hashbang":false});
+
+router.map({
+  '/':{
+    component:require("./views/home")
   },
-  ready:function(){
-      //alert("Hola");
+  '/about':{
+    component:require("./views/about")
   },
-  components:{
-    mynav:require("./components/main-nav"),
-    contact:require("./components/contact.component.js"),
-    addcontact:require("./components/add-contact.js")
+  "/contact":{
+    component:require("./views/contact")
+  },
+  "/*":{
+    component:require("./views/404")
   }
-})
+});
+
+
+var App = Vue.extend({
+  components:{
+    mainnav:require("./components/main-nav")
+  }
+
+});
+
+
+router.start(App,"body");

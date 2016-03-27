@@ -2,6 +2,15 @@ body{
   background: yellow;
 }
 
+.app{
+  background: #ddd;
+  width:70%;
+  margin:0 auto;
+  margin-top:10%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .contact{
   background: red;
 }

@@ -5,19 +5,13 @@
     <title>Vue</title>
   </head>
   <body>
+    <div class="app">
 
-    {{msg}}
+      <mainnav></mainnav>
+      <router-view></router-view>
 
-
-
-    <mynav></mynav>
-
-    <div v-for="contact in contacts">
-      <contact :thename="contact"></contact>
     </div>
-    <div >
-      <addcontact></addcontact>
-    </div>
+
 
     <script type="text/javascript" src="bundle.js"></script>
   </body>
