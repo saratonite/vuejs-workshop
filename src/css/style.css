@@ -1,5 +1,6 @@
 body{
   background: yellow;
+  font-family:sans-serif;
 }
 
 .app{
@@ -11,6 +12,18 @@ body{
   border-radius: 5px;
 }
 
+.pagefx-transition{
+  transition: all .5s ease;
+}
+
+.pagefx-enter,.pagefx-leave{
+  opacity: 0;
+  transform: translate3d(10px,0,0);
+}
+
 .contact{
   background: red;
+}
+.v-link-active{
+  color: red;
 }

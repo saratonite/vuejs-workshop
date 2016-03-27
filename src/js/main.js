@@ -24,7 +24,7 @@ router.map({
   "/contact":{
     component:require("./views/contact")
   },
-  "/*":{
+  "*":{
     component:require("./views/404")
   }
 });
