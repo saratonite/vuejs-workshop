@@ -8,6 +8,7 @@ Vue.use(VueRouter);
 
 
 require('../css/style.css');
+require("./libs/notifier/notifier.css");
 
 // Vue Router
 

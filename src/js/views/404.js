@@ -1,8 +1,3 @@
 module.exports = {
-  template:`
-  <div>
-  <h1>Sorry. Not Found !!</h1>
-  </div>
-
-  `
+  template:require('./tpl/404.html')
 }
