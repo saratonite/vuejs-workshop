@@ -25,6 +25,9 @@ router.map({
   "/contact":{
     component:require("./views/contact")
   },
+  "/login":{
+    component:require("./views/login")
+  },
   "*":{
     component:require("./views/404")
   }
