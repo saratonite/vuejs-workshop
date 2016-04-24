@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "vue": "^1.0.17",
+    "vue-resource": "^0.7.0",
     "vue-router": "^0.7.11"
   },
   "devDependencies": {

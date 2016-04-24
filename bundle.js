@@ -71,15 +71,18 @@
 	  "/contact":{
 	    component:__webpack_require__(14)
 	  },
-	  "*":{
+	  "/login":{
 	    component:__webpack_require__(17)
+	  },
+	  "*":{
+	    component:__webpack_require__(19)
 	  }
 	});
 
 
 	var App = Vue.extend({
 	  components:{
-	    mainnav:__webpack_require__(19)
+	    mainnav:__webpack_require__(21)
 	  }
 
 	});
@@ -12571,7 +12574,7 @@
 
 
 	// module
-	exports.push([module.id, "body{\n  font-family:sans-serif;\n}\n\n\n\n.pagefx-transition{\n  transition: all .5s ease;\n}\n\n\n\n.pagefx-enter,.pagefx-leave{\n  opacity: 0;\n  transform: translate3d(10px,0,0);\n}\n\n.contact{\n  background: red;\n}\n.v-link-active{\n  color: red;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n.pagefx-transition{\n  transition: all .5s ease;\n}\n\n\n\n.pagefx-enter,.pagefx-leave{\n  opacity: 0;\n  transform: translate3d(10px,0,0);\n}\n\n.contact{\n  background: red;\n}\n.v-link-active{\n  color: red;\n}\n", ""]);
 
 	// exports
 
@@ -12937,7 +12940,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n<h1>Home Page</h1>\n<p>Coming back to home is always a bliz</p>\n</div\n";
+	module.exports = "<div class=\"col-md-12\">\n<h1>Home Page</h1>\n<p>Coming back to home is always a bliz</p>\n</div\n";
 
 /***/ },
 /* 12 */
@@ -12952,7 +12955,7 @@
 /* 13 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n<h1>About Page</h1>\n<p> Hey i'm Sarath , and i'm awesome!!!!</p>\n</div>\n";
+	module.exports = "<div class=\"col-md-12\">\n<h1>About Page</h1>\n<p> Hey i'm Sarath , and i'm awesome!!!!</p>\n</div>\n";
 
 /***/ },
 /* 14 */
@@ -13011,29 +13014,54 @@
 /* 16 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"col-md-12\">\n  <div class=\"col-md-7\">\n\n    <h1>Contact Page</h1>\n    <p>Seriously?</p>\n\n  </div>\n\n  <div class=\"col-md-5\">\n    <div class=\"panel panel-default\">\n\n      <div class=\"panel-heading\">\n        <h5>Contact Us</h5>\n      </div>\n\n      <div class=\"panel-body\">\n        <form class=\"form-horizontal\" action=\"index.html\" method=\"post\">\n\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Name</label>\n            <div class=\"col-md-8\">\n                <input type=\"text\" class=\"form-control\" v-model=\"contact.name\" >\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Email</label>\n            <div class=\"col-md-8\">\n                <input type=\"text\" class=\"form-control\" v-model=\"contact.email\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Phone</label>\n            <div class=\"col-md-8\">\n                <input type=\"text\" class=\"form-control\" v-model=\"contact.phone\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Message</label>\n            <div class=\"col-md-8\">\n                <textarea  class=\"form-control\"  v-model=\"contact.message\"></textarea>\n            </div>\n          </div>\n\n          <div class=\"form-group\">\n\n            <div class=\"col-md-8 col-md-offset-3\">\n                <input type=\"button\" class=\"btn btn-success\" name=\"name\" @click=\"submit\" :disabled=\"contact.request\" value=\"SUBMIT\">\n                <input type=\"button\" class=\"btn btn-danger\" name=\"name\" @click=\"reset\" value=\"CANCEL\">\n            </div>\n          </div>\n\n        </form>\n      </div>\n\n    </div>\n  </div>\n\n</div>\n";
+	module.exports = "<div class=\"col-md-12\">\n\n    <h1>Contact Page</h1>\n    <p>Seriously?</p>\n\n  <div class=\"col-md-5\">\n    <div class=\"panel panel-default\">\n\n      <div class=\"panel-heading\">\n        <h5>Contact Us</h5>\n      </div>\n\n      <div class=\"panel-body\">\n        <form class=\"form-horizontal\" action=\"index.html\" method=\"post\">\n\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Name</label>\n            <div class=\"col-md-8\">\n                <input type=\"text\" class=\"form-control\" v-model=\"contact.name\" >\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Email</label>\n            <div class=\"col-md-8\">\n                <input type=\"text\" class=\"form-control\" v-model=\"contact.email\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Phone</label>\n            <div class=\"col-md-8\">\n                <input type=\"text\" class=\"form-control\" v-model=\"contact.phone\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-label col-md-3\">Message</label>\n            <div class=\"col-md-8\">\n                <textarea  class=\"form-control\"  v-model=\"contact.message\"></textarea>\n            </div>\n          </div>\n\n          <div class=\"form-group\">\n\n            <div class=\"col-md-8 col-md-offset-3\">\n                <input type=\"button\" class=\"btn btn-success\" name=\"name\" @click=\"submit\" :disabled=\"contact.request\" value=\"SUBMIT\">\n                <input type=\"button\" class=\"btn btn-danger\" name=\"name\" @click=\"reset\" value=\"CANCEL\">\n            </div>\n          </div>\n\n        </form>\n      </div>\n\n    </div>\n  </div>\n\n</div>\n";
 
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
-	  template:__webpack_require__(18)
-	}
 
+		template:__webpack_require__(18),
+		data:function(){
+			return {
+
+				"userdata":{
+					"username":"someone",
+					"email":"someone@eamil.com"
+				}
+
+			}
+		}
+	}
 
 /***/ },
 /* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n<h1>Sorry. Not Found !!</h1>\n</div>\n";
+	module.exports = "<div class=\"col-md-12\">\n\n\t<div class=\"col-md-5\">\n\n\t\t<div class=\"panel panel-default\">\n\n\t\t\t<div class=\"panel-heading\">Login</div>\n\t\t\t\n\t\t\t<div class=\"panel-body\">\n\t\t\t\t<form action=\"\" class=\"form-horizontal\">\n\t\t\t\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=\"\" class=\"col-md-3\">Username</label>\n\t\t\t\t<div class=\"col-md-9\">\n\t\t\t\t\t<input type=\"text\" class=\"form-control\" v-model=\"userdata.username\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=\"\" class=\"col-md-3\">Email</label>\n\t\t\t\t<div class=\"col-md-9\">\n\t\t\t\t\t<input type=\"email\" class=\"form-control\" v-model=\"userdata.email\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\">\n\t\t\t\t\n\t\t\t\t<div class=\"col-md-9 col-md-offset-3\">\n\t\t\t\t\t<button class=\"btn btn-success\">Login</button>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t</form>\n\t\t\t\t\n\t\t\t</div>\n\t\t</div>\n\t\t\n\t</div>\n\t\n\n</div>";
 
 /***/ },
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = {
+	  template:__webpack_require__(20)
+	}
+
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>\n<h1>Sorry. Not Found !!</h1>\n</div>\n";
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
 	module.exports =  {
-	  template:__webpack_require__(20),
+	  template:__webpack_require__(22),
 	  ready:function(){
 	    //alert("cool");
 	    console.log(this.$route);
@@ -13043,10 +13071,10 @@
 
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\">Kript</a>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav\">\n        <li><a v-link=\"{ path: '/' }\">Home</a></li>\n        <li><a v-link=\"{ path: '/about' }\">About</a></li>\n          <li><a v-link=\"{ path: '/contact' }\">Contact</a></li>\n      </ul>\n\n\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n";
+	module.exports = "\n<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" v-link=\"{path:'/'}\">Awesomeness</a>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav\">\n        <li><a v-link=\"{ path: '/' }\">Home</a></li>\n        <li><a v-link=\"{ path: '/about' }\">About</a></li>\n          <li><a v-link=\"{ path: '/contact' }\">Contact</a></li>\n      </ul>\n\n      <ul class=\"nav navbar-nav pull-right\">\n        <li><a v-link=\"{path:'/login'}\">Login</a></li>\n      </ul>\n\n\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n";
 
 /***/ }
 /******/ ]);
